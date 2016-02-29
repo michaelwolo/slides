@@ -1,0 +1,10 @@
+* Folders #
+node_modules/
+dist/
+
+# OS files #
+.DS_Store
+.DS_Store?
+
+# Dev config files #
+.eslintrc
