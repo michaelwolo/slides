@@ -1,4 +1,4 @@
-import { List, Map } from 'immutable';
+import { List } from 'immutable';
 import { MOVE_FORWARD, MOVE_BACKWARD } from '../types/types';
 
 export function slides(state = List([]), action) {
@@ -8,20 +8,12 @@ export function slides(state = List([]), action) {
   }
 }
 
-export function indexes(state = Map({ current: 0, previous: null }), action) {
-  const current = state.get('current');
+export function current(state = 0, action) {
   switch (action.type) {
     case MOVE_BACKWARD:
-      return Map({
-        current: current > 0 ? current - 1 : 0,
-        previous: current
-      });
+      return state - (state > 0 ? 1 : 0);
     case MOVE_FORWARD:
-      console.log(action);
-      return Map({
-        current: current + (current < action.max - 1 ? 1 : 0),
-        previous: current
-      });
+      return state + (state < action.max - 1 ? 1 : 0)
     default:
       return state;
   }
