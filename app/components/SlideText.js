@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 
 export default class SlideText extends Component {
   render() {
-    const { text } = this.props;
+    const { text, subtext } = this.props;
     return (
-      <h1 className="text">{text}</h1>
+      <div className="text">
+        <h1>{text}</h1>
+        <h2>{subtext}</h2>
+      </div>
     );
   }
 }

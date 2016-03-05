@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Slides</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-okaidia.min.css">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
       @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:500,400);
 
       * {
-        box-sizing: inherit;
+        box-sizing: border-box;
       }
       html {
         box-sizing: border-box;
@@ -36,14 +37,17 @@
       .container {
         border: 1px solid #F5F5F5;
         height: calc(100% - 40px);
-        margin: 20px;
+        /*margin: 20px;*/
         position: relative;
+        left: 20px;
+        top: 20px;
+        width: calc(100% - 40px);
       }
       .achievement {
         padding: 20px 0;
         position: absolute;
         left: 50%;
-        top: 48%;
+        top: 46%;
         transform: translate(-50%, -50%);
         text-align: center;
         width: 100%;
@@ -100,22 +104,41 @@
         opacity: 0;
         text-align: center;
       }
-      h1.text {
-        color: #F5F5F5;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 60px;
+      .text {
         position: absolute;
         left: 50%;
         top: 48%;
         transform: translate(-50%, -50%);
+        width: 100%;
+      }
+      .text h1, .text h2 {
+        color: #F5F5F5;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 60px;
         text-align: center;
+      }
+      .text h2 {
+        font-size: 50px;
+        margin: 10px 0 0;
       }
       .tag {
         margin: 0 3px;
       }
+      pre {
+        border-radius: 3px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 46%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+      }
     </style>
   </head>
   <body>
+    <!-- <pre><code class="language-css">p {
+  color: red
+}</code></pre> -->
     <div id="container"></div>
   </body>
   <script src="app.js"></script>

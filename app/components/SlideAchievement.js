@@ -23,16 +23,16 @@ export default class SlideAchievement extends Component {
     const sequence = [{
       e: type, p: { backgroundColor: this.props.color, translateY: 75 }, o: { duration: 0, easing: 'ease', sequenceQueue: false }
     },{
-      e: type, p: { opacity: [1, 1], scale: [1.5, 0] }, o: { duration: 400, easing: 'ease' }
+      e: type, p: { opacity: [1, 1], scale: [1.5, 0] }, o: { duration: 250, easing: 'ease' }
     },{
       // offsetWidth works but getBoundingClientRect returns 0 on componentDidMount
       e: shine, p: { translateX: [this.refs.type.offsetWidth + 40, 0] }, o: { duration: 550, easing: 'ease' }
     },{
-      e: type, p: { scale: 1 }, o: { delay: 100, duration: 500, easing: 'ease', sequenceQueue: false }
+      e: type, p: { scale: 1 }, o: { delay: 100, duration: 300, easing: 'ease', sequenceQueue: false }
     },{
-      e: type, p: { translateY: 0 }, o: { duration: 500, easing: 'ease' }
+      e: type, p: { translateY: 0 }, o: { duration: 400, easing: 'ease' }
     },{
-      e: title, p: { opacity: 1, scale: [1, 0.9] }, o: { delay: 500, duration: 500, easing: 'ease', sequenceQueue: false }
+      e: title, p: { opacity: 1, scale: [1, 0.9] }, o: { delay: 350, duration: 400, easing: 'ease', sequenceQueue: false }
     }];
     // Clear all previous animation styling (from previous achievement)
     shine.style = '';
