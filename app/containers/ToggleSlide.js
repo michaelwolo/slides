@@ -11,7 +11,7 @@ class ToggleSlide extends Component {
     // Keyboard handlers are "scoped" to node to allow child components to override keyboard handlers
     findDOMNode(this).focus();
   }
-  toggleSlide(e) {
+  toggleSlide = (e) => {
     if (e.keyCode === 37 || e.keyCode === 40) {
       this.props.back();
     } else if (e.keyCode === 39 || e.keyCode === 38) {
@@ -23,7 +23,7 @@ class ToggleSlide extends Component {
       <div
         className="keyhandler"
         tabIndex="1"
-        onKeyDown={(e) => this.toggleSlide(e)}
+        onKeyDown={this.toggleSlide}
         onBlur={(e) => e.target.focus()}>
         <Slide slide={this.props.current} />
       </div>
